@@ -72,7 +72,7 @@ public class TheFanlarf {
 
 		
 		GameRegistry.addRecipe( new ItemStack(HardenedClayPick,1), new Object[]{
-			"CCC", " S ", " S ", 'C', Block.field_111032_cD  , 'S', Item.stick });
+			"CCC", " S ", " S ", 'C', Block.hardenedClay  , 'S', Item.stick });
 
 	}
 
