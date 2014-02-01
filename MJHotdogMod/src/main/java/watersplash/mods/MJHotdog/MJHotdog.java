@@ -14,7 +14,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.init.Items;
 
-@Mod(modid = "MJHotdog", name = "MJHotdog", version = "1.7.2")
+@Mod(modid = "MJHotdog", name = "MJHotdog", version = "1.7.2_1")
 //@NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 public class MJHotdog {
@@ -61,7 +61,7 @@ public class MJHotdog {
 	}
 
     public void initializeItems() {
-    	
+    	// 201402011343 MJS : new ItemFood(int healthAmount, bool isFoodForWolves)
 		RawFrank = (ItemFood)(new RawFrank(2, false)).setUnlocalizedName("RawFrank");
 		CookedFrank = (ItemFood)(new CookedFrank(6, false)).setUnlocalizedName("CookedFrank");
 		Hotdog = (ItemFood)(new Hotdog(6, false)).setUnlocalizedName("Hotdog");
@@ -103,17 +103,21 @@ public class MJHotdog {
 		LanguageRegistry.addName(HotdogRelish, "Relish Hotdog");
 */
 		//Recipes//
-
+		final int DYE_COLOR_RED = 1;     //only for use with Items.dye below
+		final int DYE_COLOR_YELLOW = 11; //only for use with Items.dye below
+		final int DYE_COLOR_GREEN = 2;   //only for use with Items.dye below
+		
+		
 		GameRegistry.addShapelessRecipe( new ItemStack(RawFrank,4), new Object[]{
 			Items.porkchop, Items.chicken, Items.beef, Items.rotten_flesh});
 		GameRegistry.addRecipe( new ItemStack(Hotdog,2), new Object[]{
 			"F ", "B ", 'F', MJHotdog.CookedFrank, 'B', Items.bread});
 		GameRegistry.addRecipe( new ItemStack(HotdogKetchup,1), new Object[]{
-			"R ", "H ", 'R', new ItemStack(Items.dye, 1, 1), 'H', MJHotdog.Hotdog});
+			"R ", "H ", 'R', new ItemStack(Items.dye, 1, DYE_COLOR_RED), 'H', MJHotdog.Hotdog});
 		GameRegistry.addRecipe( new ItemStack(HotdogMustard,1), new Object[]{
-			"Y ", "H ", 'Y', new ItemStack(Items.dye, 1, 11), 'H', MJHotdog.Hotdog});
+			"Y ", "H ", 'Y', new ItemStack(Items.dye, 1, DYE_COLOR_YELLOW), 'H', MJHotdog.Hotdog});
 		GameRegistry.addRecipe( new ItemStack(HotdogRelish,1), new Object[]{
-			"G ", "H ", 'G', new ItemStack(Items.dye, 1, 2), 'H', MJHotdog.Hotdog});
+			"G ", "H ", 'G', new ItemStack(Items.dye, 1, DYE_COLOR_GREEN), 'H', MJHotdog.Hotdog});
 
 	}
 

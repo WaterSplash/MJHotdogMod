@@ -9,12 +9,10 @@ import net.minecraft.item.ItemFood;
 
 public class CookedFrank extends ItemFood {
 	
-    public CookedFrank(int par2, boolean par3)
+    public CookedFrank(int healthAmount, boolean isFoodForWolves)
     {
-        super(par2, 0.6F, par3);
+        super(healthAmount, 0.6F, isFoodForWolves);
     }
-    
-
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister)
