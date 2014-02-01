@@ -89,7 +89,8 @@ public class MJHotdog {
 
 		//Registering things//
 
-		GameRegistry.addSmelting(MJHotdog.RawFrank, new ItemStack(MJHotdog.CookedFrank, 1), 300.0f);
+//		GameRegistry.addSmelting(MJHotdog.RawFrank, new ItemStack(MJHotdog.CookedFrank, 1), 300.0f);
+		GameRegistry.addSmelting(GameRegistry.findItem("MJHotdog", "RawFrank"), new ItemStack(MJHotdog.CookedFrank, 1), 300.0f);
 
 		
 		
