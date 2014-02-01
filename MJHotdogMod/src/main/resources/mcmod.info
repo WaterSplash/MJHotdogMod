@@ -1,0 +1,16 @@
+[
+{
+  "modid": "MJHotdog",
+  "name": "MJHotdog",
+  "description": "Adds hot dogs as a food item.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://www.mjstemen.com/",
+  "updateUrl": "",
+  "authors": ["WaterSplash"],
+  "credits": "Justmakinmusic for Skype support",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
